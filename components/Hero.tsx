@@ -10,7 +10,7 @@ const Hero: React.FC<Props> = ({ onShopClick }) => {
     <section className="relative h-screen w-full overflow-hidden">
       <div className="absolute inset-0">
         <img 
-          src="https://images.unsplash.com/photo-1544681280-d25a782adc9b?auto=format&fit=crop&w=2000&q=80" 
+          src="https://static.independent.co.uk/2025/05/09/15/22/iStock-1404156627.jpg" 
           alt="Bakery background" 
           className="w-full h-full object-cover scale-110 animate-[zoom-out_20s_ease-in-out_infinite]"
         />

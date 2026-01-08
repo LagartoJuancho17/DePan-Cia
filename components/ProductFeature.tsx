@@ -54,7 +54,7 @@ const ProductFeature: React.FC<Props> = ({ collections, activeId, onSelect, onAd
   };
 
   return (
-    <section ref={sectionRef} className="py-24 md:py-32 overflow-hidden bg-[#FAF9F7]">
+    <section ref={sectionRef} className="py-24 md:py-32 overflow-hidden">
       <div className="max-w-[1920px] mx-auto">
         <div className="px-6 md:px-12 mb-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-12 reveal">
           <div>
@@ -82,8 +82,19 @@ const ProductFeature: React.FC<Props> = ({ collections, activeId, onSelect, onAd
                 style={{ transitionDelay: `${(idx % 5) * 50}ms` }}
               >
                 <div className="aspect-square bg-[#EFECE7] flex items-center justify-center p-4 md:p-12 overflow-hidden mb-4 md:mb-6 relative transition-colors duration-500 group-hover/card:bg-[#F3EFEA]">
-                  <div className="w-full h-full rounded-full overflow-hidden shadow-2xl transition-all duration-700 group-hover/card:scale-110 group-hover/card:shadow-[#D12626]/10">
-                    <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+                  <div className="w-full h-full rounded-full overflow-hidden shadow-2xl transition-all duration-700 group-hover/card:scale-110 group-hover/card:shadow-[#D12626]/10 relative">
+                    <img 
+                      src={product.image} 
+                      alt={product.name} 
+                      className={`w-full h-full object-cover ${product.id === 'k1' ? 'transition-opacity duration-500 group-hover/card:opacity-0' : ''}`} 
+                    />
+                    {product.id === 'k1' && (
+                      <img 
+                        src={product.image.replace('.webp', '-hover.webp')} 
+                        alt={`${product.name} hover`} 
+                        className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover/card:opacity-100" 
+                      />
+                    )}
                   </div>
                   <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 opacity-0 md:group-hover/card:opacity-100 transition-all translate-y-4 md:group-hover/card:translate-y-0 hidden md:block">
                     <button 

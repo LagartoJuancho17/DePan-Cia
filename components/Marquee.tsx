@@ -7,7 +7,7 @@ const Marquee: React.FC = () => {
     <section className="bg-[#fcfaf7] border-y border-black/5 py-12 marquee-container">
       <div className="marquee-content flex gap-12 md:gap-24">
         {MARQUEE_WORDS.map((word, idx) => (
-          <span key={idx} className="text-5xl md:text-8xl font-bold uppercase tracking-tighter opacity-10 italic">
+          <span key={idx} className="text-5xl md:text-8xl font-bold uppercase tracking-tighter opacity-1 italic text-[#D12626]">
             {word}
           </span>
         ))}

@@ -10,7 +10,7 @@ export const COLLECTIONS: Collection[] = [
         id: 'c1', 
         name: 'Classic Butter Croissant', 
         price: 4.75, 
-        image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80', 
+        image: 'https://pngimg.com/d/croissant_PNG46693.png', 
         tags: ['Non-GMO'],
         description: 'Our signature 27-layer croissant, made with Isigny Ste Mère butter for an incomparable honeycomb crumb and golden, flaky crust.',
         ingredients: ['Organic Wheat Flour', 'Cultured Butter', 'Sea Salt', 'Organic Cane Sugar', 'Fresh Yeast']
@@ -19,7 +19,7 @@ export const COLLECTIONS: Collection[] = [
         id: 'c2', 
         name: 'Almond Twice-Baked', 
         price: 6.50, 
-        image: 'https://images.unsplash.com/photo-1508061461508-cb18c242f556?auto=format&fit=crop&w=500&q=80', 
+        image: 'https://danielsdonuts.com.au/wp-content/uploads/2025/02/DD_PNG_HiSylvia-15.png', 
         tags: ['Non-GMO'],
         description: 'Soaked in light rum syrup and filled with a thick layer of almond frangipane, then baked again for a nutty, caramelized crunch.',
         ingredients: ['Classic Croissant', 'California Almond Flour', 'Organic Eggs', 'Rum Syrup', 'Toasted Almond Slivers']
@@ -35,6 +35,9 @@ export const COLLECTIONS: Collection[] = [
       },
       { id: 'c4', name: 'Pistachio Cream Escargot', price: 6.75, image: 'https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Spiraled pastry filled with rich pistachio pastry cream and roasted kernels.', ingredients: ['Pistachio Flour', 'Whole Milk', 'Vanilla Bean', 'Wheat Flour', 'Butter'] },
       { id: 'c5', name: 'Ham & Gruyère Croissant', price: 8.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Savory morning favorite with house-cured ham and 12-month aged Swiss Gruyère.', ingredients: ['Cured Ham', 'Gruyère Cheese', 'Dijon Mustard', 'Buttery Pastry'] },
+      { id: 'c6', name: 'Ham & Gruyère Croissant', price: 8.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Savory morning favorite with house-cured ham and 12-month aged Swiss Gruyère.', ingredients: ['Cured Ham', 'Gruyère Cheese', 'Dijon Mustard', 'Buttery Pastry'] },
+      { id: 'c7', name: 'Ham & Gruyère Croissant', price: 8.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Savory morning favorite with house-cured ham and 12-month aged Swiss Gruyère.', ingredients: ['Cured Ham', 'Gruyère Cheese', 'Dijon Mustard', 'Buttery Pastry'] },
+      { id: 'c8', name: 'Ham & Gruyère Croissant', price: 8.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Savory morning favorite with house-cured ham and 12-month aged Swiss Gruyère.', ingredients: ['Cured Ham', 'Gruyère Cheese', 'Dijon Mustard', 'Buttery Pastry'] },
     ]
   },
   {
@@ -45,7 +48,7 @@ export const COLLECTIONS: Collection[] = [
         id: 'k1', 
         name: 'Lemon Poppyseed Loaf', 
         price: 12.00, 
-        image: 'https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=500&q=80', 
+        image: '/images/menu/cakes/cake.webp', 
         tags: ['Non-GMO'],
         description: 'A dense, moist loaf infused with Meyer lemon zest and a generous amount of blue poppyseeds for texture.',
         ingredients: ['Organic Flour', 'Meyer Lemons', 'Blue Poppyseeds', 'Greek Yogurt', 'Extra Virgin Olive Oil']
@@ -103,6 +106,44 @@ export const COLLECTIONS: Collection[] = [
       { id: 'e3', name: 'Miniature Cake Selection', price: 60.00, image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'] },
       { id: 'e4', name: 'Wedding Tasting Pack', price: 25.00, image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'] },
       { id: 'e5', name: 'Artisan Coffee Service', price: 35.00, image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO', 'Vegan'] },
+    ]
+  },
+  {
+  id: 'queso',
+    title: 'Rucula',
+    products: [
+      { 
+        id: 'j1', 
+        name: 'Classic Butter Croissant', 
+        price: 4.75, 
+        image: 'https://pngimg.com/d/croissant_PNG46693.png', 
+        tags: ['Non-GMO'],
+        description: 'Our signature 27-layer croissant, made with Isigny Ste Mère butter for an incomparable honeycomb crumb and golden, flaky crust.',
+        ingredients: ['Organic Wheat Flour', 'Cultured Butter', 'Sea Salt', 'Organic Cane Sugar', 'Fresh Yeast']
+      },
+      { 
+        id: 'j2', 
+        name: 'Almond Twice-Baked', 
+        price: 6.50, 
+        image: 'https://danielsdonuts.com.au/wp-content/uploads/2025/02/DD_PNG_HiSylvia-15.png', 
+        tags: ['Non-GMO'],
+        description: 'Soaked in light rum syrup and filled with a thick layer of almond frangipane, then baked again for a nutty, caramelized crunch.',
+        ingredients: ['Classic Croissant', 'California Almond Flour', 'Organic Eggs', 'Rum Syrup', 'Toasted Almond Slivers']
+      },
+      { 
+        id: 'j3', 
+        name: 'Valrhona Pain au Chocolat', 
+        price: 5.75, 
+        image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', 
+        tags: ['Non-GMO'],
+        description: 'Tucked inside our buttery dough are three bars of 70% dark Valrhona chocolate, offering a perfect balance of bitter and sweet.',
+        ingredients: ['Organic Wheat Flour', 'Cultured Butter', 'Valrhona 70% Dark Chocolate', 'Sea Salt', 'Cane Sugar']
+      },
+      { id: 'j4', name: 'Pistachio Cream Escargot', price: 6.75, image: 'https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Spiraled pastry filled with rich pistachio pastry cream and roasted kernels.', ingredients: ['Pistachio Flour', 'Whole Milk', 'Vanilla Bean', 'Wheat Flour', 'Butter'] },
+      { id: 'j5', name: 'Ham & Gruyère Croissant', price: 8.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Savory morning favorite with house-cured ham and 12-month aged Swiss Gruyère.', ingredients: ['Cured Ham', 'Gruyère Cheese', 'Dijon Mustard', 'Buttery Pastry'] },
+      { id: 'j6', name: 'Ham & Gruyère Croissant', price: 8.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Savory morning favorite with house-cured ham and 12-month aged Swiss Gruyère.', ingredients: ['Cured Ham', 'Gruyère Cheese', 'Dijon Mustard', 'Buttery Pastry'] },
+      { id: 'j7', name: 'Ham & Gruyère Croissant', price: 8.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Savory morning favorite with house-cured ham and 12-month aged Swiss Gruyère.', ingredients: ['Cured Ham', 'Gruyère Cheese', 'Dijon Mustard', 'Buttery Pastry'] },
+      { id: 'j8', name: 'Ham & Gruyère Croissant', price: 8.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Savory morning favorite with house-cured ham and 12-month aged Swiss Gruyère.', ingredients: ['Cured Ham', 'Gruyère Cheese', 'Dijon Mustard', 'Buttery Pastry'] },
     ]
   }
 ];
