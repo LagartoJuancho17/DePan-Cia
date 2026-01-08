@@ -1,0 +1,7 @@
+{
+  "name": "Pan&Cia | Artisanal Sourdough & Pastries",
+  "description": "A clean, minimalist artisanal bakery web application inspired by high-end grocery aesthetics. Features product sliders, marquee animations, and an AI-powered bakery assistant.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
