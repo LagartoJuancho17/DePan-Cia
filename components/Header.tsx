@@ -91,7 +91,7 @@ const Header: React.FC<Props> = ({ onNavigate, currentView, cartCount, onOpenCar
               onClick={() => onNavigate('shop')}
               className="hidden sm:block text-[10px] font-bold uppercase tracking-[0.2em] bg-[#D12626] text-white px-6 py-3 rounded-full hover:scale-105 transition-all shadow-lg shadow-[#D12626]/20"
             >
-              Order Now
+              Ordena Ahora
             </button>
           </div>
         </nav>
