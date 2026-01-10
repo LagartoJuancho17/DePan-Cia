@@ -65,12 +65,19 @@ const MenuView: React.FC<Props> = ({ onBack, onAddToCart, onViewDetails }) => {
                     style={{ transitionDelay: `${(cIdx * 100) + (pIdx * 50)}ms` }}
                   >
                     {/* Thumbnail Visual */}
-                    <div className="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full overflow-hidden bg-[#EFECE7] border border-black/5 transition-transform duration-500 group-hover:scale-110">
+                    <div className="w-16 h-16 md:w-20 md:h-20 shrink-0 overflow-hidden bg-[#EFECE7] border border-black/5 transition-transform duration-500 group-hover:scale-110 relative">
                       <img 
                         src={product.image} 
                         alt={product.name} 
-                        className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700" 
+                        className={`w-full h-full object-cover transition-all duration-700 ${product.hoverImage ? 'absolute inset-0 group-hover:opacity-0' : 'grayscale-[0.5] group-hover:grayscale-0'}`} 
                       />
+                      {product.hoverImage && (
+                        <img 
+                          src={product.hoverImage} 
+                          alt={product.name} 
+                          className="w-full h-full object-cover absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700" 
+                        />
+                      )}
                     </div>
 
                     <div className="flex-grow pt-1">

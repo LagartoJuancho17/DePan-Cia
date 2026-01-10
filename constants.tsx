@@ -9,26 +9,29 @@ export const COLLECTIONS: Collection[] = [
       { 
         id: 'c1', 
         name: 'Classic Butter Croissant', 
-        price: 4.75, 
-        image: 'https://pngimg.com/d/croissant_PNG46693.png', 
+        price: 1200, 
+        image: '/images/menu/croissantes/croissant1.webp',
+        hoverImage: '/images/menu/croissantes/croissant1-hover.webp',
         tags: ['Non-GMO'],
         description: 'Our signature 27-layer croissant, made with Isigny Ste Mère butter for an incomparable honeycomb crumb and golden, flaky crust.',
         ingredients: ['Organic Wheat Flour', 'Cultured Butter', 'Sea Salt', 'Organic Cane Sugar', 'Fresh Yeast']
       },
       { 
         id: 'c2', 
-        name: 'Almond Twice-Baked', 
-        price: 6.50, 
-        image: 'https://danielsdonuts.com.au/wp-content/uploads/2025/02/DD_PNG_HiSylvia-15.png', 
+        name: 'Cinnamon Rol', 
+        price: 1650, 
+        image: '/images/menu/croissantes/cinnamonrol.webp', 
+        hoverImage: '/images/menu/croissantes/cinnamonrol-hover.webp',
         tags: ['Non-GMO'],
         description: 'Soaked in light rum syrup and filled with a thick layer of almond frangipane, then baked again for a nutty, caramelized crunch.',
-        ingredients: ['Classic Croissant', 'California Almond Flour', 'Organic Eggs', 'Rum Syrup', 'Toasted Almond Slivers']
+        ingredients: ['Classic Croissant', 'Almond Flour', 'Organic Eggs', 'Rum Syrup', 'Toasted Almond Slivers']
       },
       { 
         id: 'c3', 
-        name: 'Valrhona Pain au Chocolat', 
-        price: 5.75, 
-        image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', 
+        name: 'Pain Au Chocolat', 
+        price: 1500, 
+        image: '/images/menu/croissantes/painauchocolat.webp',
+        hoverImage: '/images/menu/croissantes/painauchocolat-hover.webp', 
         tags: ['Non-GMO'],
         description: 'Tucked inside our buttery dough are three bars of 70% dark Valrhona chocolate, offering a perfect balance of bitter and sweet.',
         ingredients: ['Organic Wheat Flour', 'Cultured Butter', 'Valrhona 70% Dark Chocolate', 'Sea Salt', 'Cane Sugar']
@@ -48,7 +51,8 @@ export const COLLECTIONS: Collection[] = [
         id: 'k1', 
         name: 'Lemon Poppyseed Loaf', 
         price: 12.00, 
-        image: '/images/menu/cakes/cake.webp', 
+        image: '/images/menu/cakes/cake1.webp', 
+        hoverImage: '/images/menu/cakes/cake1-hover.webp',
         tags: ['Non-GMO'],
         description: 'A dense, moist loaf infused with Meyer lemon zest and a generous amount of blue poppyseeds for texture.',
         ingredients: ['Organic Flour', 'Meyer Lemons', 'Blue Poppyseeds', 'Greek Yogurt', 'Extra Virgin Olive Oil']
@@ -57,14 +61,38 @@ export const COLLECTIONS: Collection[] = [
         id: 'k2', 
         name: 'Dark Chocolate Ganache', 
         price: 45.00, 
-        image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80', 
+        image: '/images/menu/cakes/cake2.webp',
+        hoverImage: '/images/menu/cakes/cake2-hover.webp',
         tags: ['Non-GMO', 'Vegan'],
         description: 'A rich, flourless-style cake made with cold-pressed cocoa and coconut milk, topped with a silk-smooth chocolate glaze.',
         ingredients: ['70% Cocoa', 'Coconut Milk', 'Maple Syrup', 'Almond Flour', 'Sea Salt']
       },
-      { id: 'k3', name: 'Burnt Basque Cheesecake', price: 38.00, image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Baked at high heat to achieve a deeply caramelized top while maintaining a custardy center.', ingredients: ['Cream Cheese', 'Heavy Cream', 'Organic Eggs', 'Vanilla Paste'] },
-      { id: 'k4', name: 'Wild Berry Sponge', price: 14.00, image: 'https://images.unsplash.com/photo-1519340333755-5072120bc201?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'] },
-      { id: 'k5', name: 'Spiced Carrot Cake', price: 15.50, image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'] },
+      { 
+        id: 'k3', 
+        name: 'Burnt Basque Cheesecake', 
+        price: 38.00, 
+        image: '/images/menu/cakes/cake3.webp', 
+        hoverImage: '/images/menu/cakes/cake3-hover.webp',
+        tags: ['Non-GMO'], 
+        description: 'Baked at high heat to achieve a deeply caramelized top while maintaining a custardy center.', 
+        ingredients: ['Cream Cheese', 'Heavy Cream', 'Organic Eggs', 'Vanilla Paste'] 
+      },
+      { 
+        id: 'k4', 
+        name: 'Wild Berry Sponge', 
+        price: 14.00, 
+        image: '/images/menu/cakes/cake4.webp', 
+        hoverImage: '/images/menu/cakes/cake4-hover.webp',
+        tags: ['Non-GMO'] 
+      },
+      { 
+        id: 'k5', 
+        name: 'Spiced Carrot Cake', 
+        price: 15.50, 
+        image: '/images/menu/cakes/cake5.webp', 
+        hoverImage: '/images/menu/cakes/cake5-hover.webp',
+        tags: ['Non-GMO'] 
+      },
     ]
   },
   {
@@ -90,7 +118,7 @@ export const COLLECTIONS: Collection[] = [
     id: 'delicatteesen',
     title: 'Delicatteesen',
     products: [
-      { id: 'd1', name: 'House Cultured Butter', price: 8.00, image: 'https://images.unsplash.com/photo-1589927986089-35812388d1f4?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'] },
+      { id: 'd1', name: 'House Cultured Butter', price: 8.00, image: '/images/menu/delicatteesen/donas.webp', hoverImage: '/images/menu/delicatteesen/donas-hover.webp', tags: ['Non-GMO'] },
       { id: 'd2', name: 'Marinated Kalamata Olives', price: 9.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO', 'Vegan'] },
       { id: 'd3', name: 'Wildflower Honey Pot', price: 12.00, image: 'https://images.unsplash.com/photo-1558583055-d7ac00b1adca?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO', 'Vegan'] },
       { id: 'd4', name: 'Sourdough Crackers', price: 7.50, image: 'https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO', 'Vegan'] },

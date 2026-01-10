@@ -81,16 +81,16 @@ const ProductFeature: React.FC<Props> = ({ collections, activeId, onSelect, onAd
                 className="min-w-[50vw] md:min-w-[24.9vw] snap-start reveal flex flex-col group/card cursor-pointer" 
                 style={{ transitionDelay: `${(idx % 5) * 50}ms` }}
               >
-                <div className="aspect-square bg-[#EFECE7] flex items-center justify-center p-4 md:p-12 overflow-hidden mb-4 md:mb-6 relative transition-colors duration-500 group-hover/card:bg-[#F3EFEA]">
-                  <div className="w-full h-full rounded-full overflow-hidden shadow-2xl transition-all duration-700 group-hover/card:scale-110 group-hover/card:shadow-[#D12626]/10 relative">
+                <div className="aspect-square bg-[#EFECE7] flex items-center justify-center overflow-hidden mb-4 md:mb-6 relative transition-colors duration-500 group-hover/card:bg-[#F3EFEA]">
+                  <div className="w-full h-full overflow-hidden shadow-2xl transition-all duration-700 group-hover/card:scale-110 group-hover/card:shadow-[#D12626]/10 relative">
                     <img 
                       src={product.image} 
                       alt={product.name} 
-                      className={`w-full h-full object-cover ${product.id === 'k1' ? 'transition-opacity duration-500 group-hover/card:opacity-0' : ''}`} 
+                      className={`w-full h-full object-cover ${product.hoverImage ? 'transition-opacity duration-500 group-hover/card:opacity-0' : ''}`} 
                     />
-                    {product.id === 'k1' && (
+                    {product.hoverImage && (
                       <img 
-                        src={product.image.replace('.webp', '-hover.webp')} 
+                        src={product.hoverImage} 
                         alt={`${product.name} hover`} 
                         className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover/card:opacity-100" 
                       />
