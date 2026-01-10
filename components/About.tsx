@@ -1,17 +1,20 @@
 
 import React from 'react';
+import { useContent } from '../context/ContentContext';
 
 interface Props {
   onBack: () => void;
 }
 
 const About: React.FC<Props> = ({ onBack }) => {
+  const { aboutContent } = useContent();
+
   return (
     <div className="bg-[#FAF9F7] min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[70vh] w-full overflow-hidden">
         <img 
-          src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=2000&q=80" 
+          src={aboutContent.heroImage}
           alt="Artisan hands" 
           className="w-full h-full object-cover"
         />
@@ -19,7 +22,7 @@ const About: React.FC<Props> = ({ onBack }) => {
           <div className="max-w-4xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
             <p className="text-white text-xs font-black uppercase tracking-[0.4em] mb-6">Nuestra Esencia</p>
             <h1 className="text-white text-6xl md:text-[8rem] font-black tracking-tighter uppercase leading-[0.8]">
-              El Arte de lo<br/><span className="text-[#D12626]">Lento</span>
+              {aboutContent.heroTitle}<br/><span className="text-[#D12626]">{aboutContent.heroSubtitle}</span>
             </h1>
           </div>
         </div>
@@ -31,15 +34,12 @@ const About: React.FC<Props> = ({ onBack }) => {
           <div className="space-y-8 reveal">
             <p className="text-[#D12626] text-xs font-black uppercase tracking-widest">Desde 2021</p>
             <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase leading-tight">
-              Harina, Agua, Sal y sobre todo, <span className="italic">Tiempo</span>.
+              {aboutContent.narrativeTitle}
             </h2>
             <div className="space-y-6 text-lg md:text-xl text-black/60 leading-relaxed font-medium">
-              <p>
-                En Pan&Cia, no creemos en los atajos. Cada una de nuestras hogazas es el resultado de una fermentación natural de 48 horas, permitiendo que las levaduras salvajes desbloqueen sabores y texturas que la panadería industrial ha olvidado.
-              </p>
-              <p>
-                Lo que comenzó como un pequeño experimento en una cocina de Los Ángeles, se ha convertido en un santuario para aquellos que valoran la honestidad en su mesa.
-              </p>
+              {aboutContent.narrativeText.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
             </div>
             <button 
               onClick={onBack}
@@ -51,7 +51,7 @@ const About: React.FC<Props> = ({ onBack }) => {
           <div className="reveal" style={{ transitionDelay: '200ms' }}>
             <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl relative">
               <img 
-                src="https://images.unsplash.com/photo-1589367920969-ab8e050be022?auto=format&fit=crop&w=1200&q=80" 
+                src={aboutContent.narrativeImage}
                 alt="Bread scoring" 
                 className="w-full h-full object-cover"
               />
@@ -72,23 +72,7 @@ const About: React.FC<Props> = ({ onBack }) => {
             <p className="text-3xl md:text-5xl font-black tracking-tighter uppercase">Lo que nos hace Pan&Cia</p>
           </div>
           <div className="grid md:grid-cols-3 gap-16">
-            {[
-              {
-                title: "Materia Prima",
-                desc: "Harinas orgánicas de molino de piedra, sal marina pura y agua filtrada. Sin conservantes, sin compromisos.",
-                img: "https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=500&q=80"
-              },
-              {
-                title: "Tradición Viva",
-                desc: "Nuestra masa madre tiene 3 años de vida, alimentada diariamente para mantener un equilibrio perfecto de acidez.",
-                img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80"
-              },
-              {
-                title: "Comunidad",
-                desc: "Más que una panadería, somos un punto de encuentro. Apoyamos a productores locales y artesanos vecinos.",
-                img: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80"
-              }
-            ].map((pillar, i) => (
+            {aboutContent.pillars.map((pillar, i) => (
               <div key={i} className="text-center space-y-8 reveal" style={{ transitionDelay: `${i * 150}ms` }}>
                 <div className="w-48 h-48 mx-auto rounded-full overflow-hidden shadow-xl border-4 border-white">
                   <img src={pillar.img} alt={pillar.title} className="w-full h-full object-cover" />

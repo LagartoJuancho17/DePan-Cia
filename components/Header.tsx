@@ -1,6 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
 
+import { useContent } from '../context/ContentContext';
+import AdminLogin from './AdminLogin';
+
 interface Props {
   onNavigate: (view: 'home' | 'shop' | 'about' | 'news' | 'menu') => void;
   currentView: 'home' | 'shop' | 'about' | 'news' | 'menu';
@@ -12,12 +15,29 @@ const Header: React.FC<Props> = ({ onNavigate, currentView, cartCount, onOpenCar
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+  const { isAdmin } = useContent();
+
+  const timerRef = React.useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleMouseDown = () => {
+    timerRef.current = setTimeout(() => {
+      if (!isAdmin) setShowLogin(true);
+    }, 6000);
+  };
+
+  const handleMouseUp = () => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+  };
 
   const openMenu = () => {
     setIsClosing(false);
@@ -54,7 +74,12 @@ const Header: React.FC<Props> = ({ onNavigate, currentView, cartCount, onOpenCar
           
           <button 
             onClick={() => onNavigate('home')}
-            className="text-2xl md:text-3xl font-black tracking-tighter uppercase text-[#2a2a2a] group"
+            onMouseDown={handleMouseDown}
+            onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseUp}
+            onTouchStart={handleMouseDown}
+            onTouchEnd={handleMouseUp}
+            className="text-2xl md:text-3xl font-black tracking-tighter uppercase text-[#2a2a2a] group select-none"
           >
             Pan<span className="text-[#D12626] transition-transform duration-500 inline-block group-hover:rotate-12">&</span>Cia
           </button>
@@ -154,6 +179,7 @@ const Header: React.FC<Props> = ({ onNavigate, currentView, cartCount, onOpenCar
           </div>
         </div>
       )}
+      {showLogin && <AdminLogin isOpen={showLogin} onClose={() => setShowLogin(false)} />}
     </>
   );
 };

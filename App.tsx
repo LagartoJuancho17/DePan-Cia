@@ -15,13 +15,15 @@ import News from './components/News';
 import MenuView from './components/MenuView';
 import Cart from './components/Cart';
 import ProductModal from './components/ProductModal';
-import { COLLECTIONS, SECTIONS, LOCATIONS } from './constants';
+import AdminPanel from './components/AdminPanel';
+import { useContent } from './context/ContentContext';
 import { CartItem, Product } from './types';
 
 const App: React.FC = () => {
+  const { collections, sections, locations } = useContent();
   const [view, setView] = useState<'home' | 'shop' | 'about' | 'news' | 'menu'>('home');
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [activeCollectionId, setActiveCollectionId] = useState(COLLECTIONS[0].id);
+  const [activeCollectionId, setActiveCollectionId] = useState(collections[0].id);
   
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
@@ -106,7 +108,7 @@ const App: React.FC = () => {
             <Hero onShopClick={() => handleNavigate('shop')} />
             
             <ProductFeature 
-              collections={COLLECTIONS} 
+              collections={collections} 
               activeId={activeCollectionId} 
               onSelect={setActiveCollectionId} 
               onAddToCart={addToCart}
@@ -118,7 +120,7 @@ const App: React.FC = () => {
             <Marquee />
 
             <div className="max-w-[1440px] mx-auto px-4 md:px-12 py-32 space-y-48">
-              {SECTIONS.map((section, idx) => (
+              {sections.map((section, idx) => (
                 <div key={idx} className="reveal">
                   <TwoUpSection content={section} />
                 </div>
@@ -145,7 +147,7 @@ const App: React.FC = () => {
 
         {view === 'shop' && (
           <ShopAll 
-            collections={COLLECTIONS} 
+            collections={collections} 
             onBack={() => handleNavigate('home')} 
             onAddToCart={addToCart}
             onViewDetails={setSelectedProduct}
@@ -162,7 +164,7 @@ const App: React.FC = () => {
 
         <section className="bg-[#efede9]/30 py-32 px-8 border-t border-black/5">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-20 text-center md:text-left">
-            {LOCATIONS.map((loc, i) => (
+            {locations.map((loc, i) => (
               <div key={i} className="space-y-6 reveal" style={{ transitionDelay: `${i * 100}ms` }}>
                 <h3 className="text-xs font-black uppercase tracking-[0.3em] text-[#D12626]">{loc.name}</h3>
                 <p className="text-2xl font-bold tracking-tight leading-tight">{loc.address}</p>
@@ -235,6 +237,7 @@ const App: React.FC = () => {
       />
 
       <AIService />
+      <AdminPanel />
     </div>
   );
 };

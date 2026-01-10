@@ -1,5 +1,5 @@
 
-import { Product, Collection, SectionContent, NewsItem } from './types';
+import { Product, Collection, SectionContent, NewsItem, AboutContent } from './types';
 
 export const COLLECTIONS: Collection[] = [
   {
@@ -264,5 +264,34 @@ export const LOCATIONS = [
   { name: 'Echo Park', address: '12142 Ventura Blvd, Studio City', phone: '(747) 205-2279' },
   { name: 'Highland Park', address: '5046 York Blvd, LA', phone: '(323) 313-6381' }
 ];
+
+export const ABOUT_CONTENT: AboutContent = {
+  heroImage: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=2000&q=80',
+  heroTitle: 'El Arte de lo',
+  heroSubtitle: 'Lento',
+  narrativeTitle: 'Harina, Agua, Sal y sobre todo, Tiempo.',
+  narrativeText: [
+    'En Pan&Cia, no creemos en los atajos. Cada una de nuestras hogazas es el resultado de una fermentación natural de 48 horas, permitiendo que las levaduras salvajes desbloqueen sabores y texturas que la panadería industrial ha olvidado.',
+    'Lo que comenzó como un pequeño experimento en una cocina de Los Ángeles, se ha convertido en un santuario para aquellos que valoran la honestidad en su mesa.'
+  ],
+  narrativeImage: 'https://images.unsplash.com/photo-1589367920969-ab8e050be022?auto=format&fit=crop&w=1200&q=80',
+  pillars: [
+    {
+      title: "Materia Prima",
+      desc: "Harinas orgánicas de molino de piedra, sal marina pura y agua filtrada. Sin conservantes, sin compromisos.",
+      img: "https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      title: "Tradición Viva",
+      desc: "Nuestra masa madre tiene 3 años de vida, alimentada diariamente para mantener un equilibrio perfecto de acidez.",
+      img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      title: "Comunidad",
+      desc: "Más que una panadería, somos un punto de encuentro. Apoyamos a productores locales y artesanos vecinos.",
+      img: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80"
+    }
+  ]
+};
 
 export const MARQUEE_WORDS = ['artisanal', 'sourdough', 'pastries', 'coffee', 'community', 'artisanal', 'sourdough', 'pastries', 'coffee', 'community'];

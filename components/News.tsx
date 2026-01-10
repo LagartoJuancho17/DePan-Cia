@@ -1,6 +1,5 @@
-
 import React, { useEffect, useRef } from 'react';
-import { NEWS_ITEMS } from '../constants';
+import { useContent } from '../context/ContentContext';
 
 interface Props {
   onBack: () => void;
@@ -8,6 +7,7 @@ interface Props {
 
 const News: React.FC<Props> = ({ onBack }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const { news } = useContent();
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -44,7 +44,7 @@ const News: React.FC<Props> = ({ onBack }) => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-1 gap-12 border-t border-black/5 pt-12">
-          {NEWS_ITEMS.map((item, idx) => (
+          {news.map((item, idx) => (
             <div key={item.id} className="reveal flex flex-col md:flex-row gap-12 group items-center py-12 border-b border-black/[0.03]">
               <div className="w-full md:w-1/2 aspect-video md:aspect-[16/9] rounded-[2.5rem] overflow-hidden">
                 <img 

@@ -38,3 +38,19 @@ export interface NewsItem {
   description: string;
   image: string;
 }
+
+export interface Pillar {
+  title: string;
+  desc: string;
+  img: string;
+}
+
+export interface AboutContent {
+  heroImage: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  narrativeTitle: string;
+  narrativeText: string[];
+  narrativeImage: string;
+  pillars: Pillar[];
+}
