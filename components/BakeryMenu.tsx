@@ -24,8 +24,8 @@ const BakeryMenu: React.FC = () => {
     <section id="menu" ref={containerRef} className="py-32 px-4 md:px-12 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-24 reveal">
-          <p className="text-[#D12626] text-xs font-bold uppercase tracking-[0.3em] mb-4">The Collection</p>
-          <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase">From the Bench</h2>
+          <p className="text-[#D12626] text-xs font-bold uppercase tracking-[0.3em] mb-4">La Colección</p>
+          <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase">Del Obrador</h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-16 md:gap-24">
@@ -56,7 +56,7 @@ const BakeryMenu: React.FC = () => {
 
         <div className="mt-24 text-center reveal">
           <p className="text-sm opacity-40 italic max-w-lg mx-auto">
-            Our menu changes with the seasons and the whims of the wild yeast. Visit us early for the best selection.
+            Nuestro menú cambia con las estaciones y los caprichos de la levadura salvaje. Visítanos temprano para disfrutar de la mejor selección.
           </p>
         </div>
       </div>

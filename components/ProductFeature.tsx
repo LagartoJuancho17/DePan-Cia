@@ -101,7 +101,7 @@ const ProductFeature: React.FC<Props> = ({ collections, activeId, onSelect, onAd
                       onClick={(e) => { e.stopPropagation(); onAddToCart(product); }}
                       className="bg-[#D12626] text-white px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-widest shadow-2xl hover:scale-105 active:scale-95 transition-all"
                     >
-                      + Quick Add
+                      + Añadir
                     </button>
                   </div>
                   <button 

@@ -25,7 +25,7 @@ const ProductModal: React.FC<Props> = ({ product, onClose, onAddToCart }) => {
 
         <div className="w-full md:w-1/2 aspect-square md:h-auto bg-[#EFECE7]">
           <img 
-            src={product.image} 
+            src={product.hoverImage} 
             alt={product.name} 
             className="w-full h-full object-cover"
           />
@@ -75,7 +75,7 @@ const ProductModal: React.FC<Props> = ({ product, onClose, onAddToCart }) => {
               }}
               className="w-full bg-[#D12626] text-white py-6 rounded-2xl text-xs font-black uppercase tracking-[0.2em] shadow-xl shadow-[#D12626]/20 hover:scale-[1.02] active:scale-95 transition-all"
             >
-              Add to Cart — ${product.price.toFixed(2)}
+              Añadir al Carrito — ${product.price.toFixed(2)}
             </button>
           </div>
         </div>

@@ -11,10 +11,10 @@ const InstagramSection: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">Follow us on Instagram</h2>
         </div>
         <a 
-          href="#" 
+          href="https://www.instagram.com/depan_cia/" 
           className="text-xs font-bold uppercase tracking-widest border border-black px-8 py-3 rounded-full hover:bg-black hover:text-white transition-all"
         >
-          @pan_cia_bakery
+          @depan_cia
         </a>
       </div>
       

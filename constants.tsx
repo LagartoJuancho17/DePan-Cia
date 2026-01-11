@@ -179,10 +179,10 @@ export const COLLECTIONS: Collection[] = [
 export const NEWS_ITEMS: NewsItem[] = [
   {
     id: 'n1',
-    date: 'Marzo 2024',
+    date: 'Enero 2026',
     category: 'Seasonal',
-    title: 'Nueva Colección de Primavera',
-    description: 'Nuestros pasteleros han diseñado una serie de galettes usando las primeras fresas de la temporada. Disponibles solo por tiempo limitado.',
+    title: 'Nueva Colección de Verano',
+    description: 'Nuestros pasteleros han diseñado una serie de cookies usando las primeras fresas de la temporada. Disponibles solo por tiempo limitado.',
     image: 'https://images.unsplash.com/photo-1519340333755-5072120bc201?auto=format&fit=crop&w=800&q=80'
   },
   {
@@ -205,76 +205,75 @@ export const NEWS_ITEMS: NewsItem[] = [
 
 export const FULL_MENU = [
   {
-    category: 'The Sourdough Bench',
+    category: 'Hogazas de Masa Madre',
     items: [
-      { name: 'Country White', desc: 'Our signature 48-hour fermented loaf.', price: '9.50' },
-      { name: 'Danish Rye', desc: 'Dense, dark, and packed with sunflower seeds.', price: '11.00' },
-      { name: 'Seeded Batard', desc: 'Toasted sesame, flax, and pumpkin seeds.', price: '10.50' },
-      { name: 'Olive & Rosemary', desc: 'Kalamata olives with fresh garden rosemary.', price: '11.50' },
+      { name: 'Blanco Rústico', desc: 'Nuestra hogaza insignia fermentada 48 horas.', price: '9.50' },
+      { name: 'Centeno Danés', desc: 'Denso, oscuro y repleto de semillas de girasol.', price: '11.00' },
+      { name: 'Batard de Semillas', desc: 'Sésamo tostado, lino y semillas de calabaza.', price: '10.50' },
+      { name: 'Aceitunas y Romero', desc: 'Aceitunas Kalamata con romero fresco del huerto.', price: '11.50' },
     ]
   },
   {
-    category: 'Viennoiserie',
+    category: 'Bollería',
     items: [
-      { name: 'Classic Croissant', desc: 'Isigny Ste Mère butter, 27 layers.', price: '4.75' },
-      { name: 'Pistachio Escargot', desc: 'Pistachio cream and roasted slivers.', price: '6.50' },
-      { name: 'Seasonal Fruit Galette', desc: 'Hand-shaped with farmers market fruit.', price: '7.00' },
-      { name: 'Pain Suisse', desc: 'Pastry cream and chocolate chips.', price: '6.00' },
+      { name: 'Croissant Clásico', desc: 'Mantequilla Isigny Ste Mère, 27 capas.', price: '4.75' },
+      { name: 'Caracola de Pistacho', desc: 'Crema de pistacho y trozos tostados.', price: '6.50' },
+      { name: 'Galette de Fruta', desc: 'Formada a mano con fruta del mercado local.', price: '7.00' },
+      { name: 'Pain Suisse', desc: 'Crema pastelera y chips de chocolate.', price: '6.00' },
     ]
   },
   {
-    category: 'Kitchen & Coffee',
+    category: 'Cocina y Café',
     items: [
-      { name: 'Avocado Tartine', desc: 'Sourdough, lemon, chili, radish.', price: '14.00' },
-      { name: 'Croque Monsieur', desc: 'House ham, gruyère, béchamel.', price: '16.00' },
-      { name: 'Flat White', desc: 'Ethically sourced Brazilian beans.', price: '4.50' },
-      { name: 'Hand-Whisked Matcha', desc: 'Ceremonial grade from Uji.', price: '6.50' },
+      { name: 'Tostada de Aguacate', desc: 'Masa madre, limón, chili, rábano.', price: '14.00' },
+      { name: 'Croque Monsieur', desc: 'Jamón de la casa, gruyère, bechamel.', price: '16.00' },
+      { name: 'Flat White', desc: 'Granos brasileños de origen ético.', price: '4.50' },
+      { name: 'Matcha Batido', desc: 'Grado ceremonial de Uji.', price: '6.50' },
     ]
   }
 ];
 
 export const SECTIONS: SectionContent[] = [
   {
-    title: 'The Art of Slow',
-    subtitle: 'We don’t rush the dough. Each loaf takes two days to reach perfection, allowing natural enzymes to unlock deep flavor and nutrition.',
-    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1200&q=80',
-    cta: 'Our Philosophy',
+    title: 'El Arte de la Calma',
+    subtitle: 'No apresuramos la masa. Cada hogaza toma dos días para alcanzar la perfección, permitiendo que las enzimas naturales desbloqueen un sabor y nutrición profundos.',
+    image: 'images/menu/extra1.jpg',
+    cta: 'Nuestra Filosofía',
     link: '#',
     imagePosition: 'right'
   },
   {
-    title: 'Workshops',
-    subtitle: 'From starter maintenance to scoring techniques. Join us at the flour bench for our weekend masterclasses.',
-    image: 'https://images.unsplash.com/photo-1555507036-716251666084?auto=format&fit=crop&w=1200&q=80',
-    cta: 'View Schedule',
+    title: 'Medialunas',
+    subtitle: 'Medialunas de pan madre, medialunas de pan madre, medialunas de pan madre.',
+    image: 'images/menu/extra2.jpg',
+    cta: 'Ver Horario',
     link: '#',
     imagePosition: 'left'
   }
 ];
 
 export const INSTAGRAM_POSTS = [
-  { id: 1, url: 'https://images.unsplash.com/photo-1589367920969-ab8e050be022?auto=format&fit=crop&w=500&q=80', caption: 'Early morning crackle.' },
-  { id: 2, url: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80', caption: 'Lamination goals.' },
-  { id: 3, url: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', caption: 'Valrhona infusions.' },
-  { id: 4, url: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80', caption: 'The perfect crumb.' },
+  { id: 1, url: '/images/instagram/fotoInstagram1.jpg', caption: 'Mini cake' },
+  { id: 2, url: '/images/instagram/fotoInstagram2.jpg', caption: 'Pan Dulce' },
+  { id: 3, url: '/images/instagram/fotoInstagram3.jpg', caption: 'Pannetone con Naranjas Confitadas' },
+  { id: 4, url: '/images/instagram/fotoInstagram4.jpg', caption: 'Mini Bombones.' },
 ];
 
 export const LOCATIONS = [
-  { name: 'Arts District', address: '12928 Venice Blvd, LA', phone: '(310) 439-2894' },
-  { name: 'Echo Park', address: '12142 Ventura Blvd, Studio City', phone: '(747) 205-2279' },
-  { name: 'Highland Park', address: '5046 York Blvd, LA', phone: '(323) 313-6381' }
+  { name: 'Villa Luro', address: 'Manzoni 30', phone: '(310) 439-2894' },
+  { name: 'Plaza Irlanda', address: 'Av. Donato Alvarez 900', phone: '(747) 205-2279' },
 ];
 
 export const ABOUT_CONTENT: AboutContent = {
   heroImage: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=2000&q=80',
-  heroTitle: 'El Arte de lo',
-  heroSubtitle: 'Lento',
+  heroTitle: 'El Arte del',
+  heroSubtitle: 'Amor',
   narrativeTitle: 'Harina, Agua, Sal y sobre todo, Tiempo.',
   narrativeText: [
     'En Pan&Cia, no creemos en los atajos. Cada una de nuestras hogazas es el resultado de una fermentación natural de 48 horas, permitiendo que las levaduras salvajes desbloqueen sabores y texturas que la panadería industrial ha olvidado.',
-    'Lo que comenzó como un pequeño experimento en una cocina de Los Ángeles, se ha convertido en un santuario para aquellos que valoran la honestidad en su mesa.'
+    'Lo que comenzó como un pequeño experimento en una cocina de Buenos Aires, se ha convertido en un santuario para aquellos que valoran la honestidad en su mesa.'
   ],
-  narrativeImage: 'https://images.unsplash.com/photo-1589367920969-ab8e050be022?auto=format&fit=crop&w=1200&q=80',
+  narrativeImage: './images/about/foto1.jpg',
   pillars: [
     {
       title: "Materia Prima",
@@ -294,4 +293,4 @@ export const ABOUT_CONTENT: AboutContent = {
   ]
 };
 
-export const MARQUEE_WORDS = ['artisanal', 'sourdough', 'pastries', 'coffee', 'community', 'artisanal', 'sourdough', 'pastries', 'coffee', 'community'];
+export const MARQUEE_WORDS = ['artesanal', 'chipa', 'medialunas', 'toto', 'comunidad', 'artesanal', 'cookies', 'sandwiches', 'café', 'torta'];
