@@ -120,9 +120,8 @@ export const COLLECTIONS: Collection[] = [
     products: [
       { id: 'd1', name: 'House Cultured Butter', price: 8.00, image: '/images/menu/delicatteesen/donas.webp', hoverImage: '/images/menu/delicatteesen/donas-hover.webp', tags: ['Non-GMO'] },
       { id: 'd2', name: 'Marinated Kalamata Olives', price: 9.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO', 'Vegan'] },
-      { id: 'd3', name: 'Wildflower Honey Pot', price: 12.00, image: 'https://images.unsplash.com/photo-1558583055-d7ac00b1adca?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO', 'Vegan'] },
-      { id: 'd4', name: 'Sourdough Crackers', price: 7.50, image: 'https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO', 'Vegan'] },
-      { id: 'd5', name: 'Organic Fruit Jam', price: 10.00, image: 'https://images.unsplash.com/photo-1519340333755-5072120bc201?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO', 'Vegan'] },
+      { id: 'd3', name: 'Marinated Kalamata Olives', price: 9.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO', 'Vegan'] },
+      { id: 'd4', name: 'Marinated Kalamata Olives', price: 9.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO', 'Vegan'] },
     ]
   },
   {
@@ -237,7 +236,7 @@ export const SECTIONS: SectionContent[] = [
   {
     title: 'El Arte de la Calma',
     subtitle: 'No apresuramos la masa. Cada hogaza toma dos días para alcanzar la perfección, permitiendo que las enzimas naturales desbloqueen un sabor y nutrición profundos.',
-    image: 'images/menu/extra1.jpg',
+    image: '/images/menu/extra1.jpg',
     cta: 'Nuestra Filosofía',
     link: '#',
     imagePosition: 'right'
@@ -245,7 +244,7 @@ export const SECTIONS: SectionContent[] = [
   {
     title: 'Medialunas',
     subtitle: 'Medialunas de pan madre, medialunas de pan madre, medialunas de pan madre.',
-    image: 'images/menu/extra2.jpg',
+    image: '/images/menu/extra2.jpg',
     cta: 'Ver Horario',
     link: '#',
     imagePosition: 'left'
@@ -273,7 +272,7 @@ export const ABOUT_CONTENT: AboutContent = {
     'En Pan&Cia, no creemos en los atajos. Cada una de nuestras hogazas es el resultado de una fermentación natural de 48 horas, permitiendo que las levaduras salvajes desbloqueen sabores y texturas que la panadería industrial ha olvidado.',
     'Lo que comenzó como un pequeño experimento en una cocina de Buenos Aires, se ha convertido en un santuario para aquellos que valoran la honestidad en su mesa.'
   ],
-  narrativeImage: './images/about/foto1.jpg',
+  narrativeImage: '/images/about/foto1.jpg',
   pillars: [
     {
       title: "Materia Prima",
