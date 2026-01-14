@@ -8,23 +8,23 @@ export const COLLECTIONS: Collection[] = [
     products: [
       { 
         id: 'c1', 
-        name: 'Classic Butter Croissant', 
+        name: 'Croissant de Mantequilla', 
         price: 1200, 
         image: '/images/menu/croissantes/croissant1.webp',
         hoverImage: '/images/menu/croissantes/croissant1-hover.webp',
         tags: ['Non-GMO'],
-        description: 'Our signature 27-layer croissant, made with Isigny Ste Mère butter for an incomparable honeycomb crumb and golden, flaky crust.',
-        ingredients: ['Organic Wheat Flour', 'Cultured Butter', 'Sea Salt', 'Organic Cane Sugar', 'Fresh Yeast']
+        description: 'Nuestro croissant insignia de 27 capas, hecho con mantequilla Isigny Ste Mère para una miga incomparable y una corteza dorada y crujiente.',
+        ingredients: ['Harina de Trigo Orgánica', 'Mantequilla Cultivada', 'Sal Marina', 'Azúcar de Caña Orgánica', 'Levadura Fresca']
       },
       { 
         id: 'c2', 
-        name: 'Cinnamon Rol', 
+        name: 'Rol de Canela', 
         price: 1650, 
         image: '/images/menu/croissantes/cinnamonrol.webp', 
         hoverImage: '/images/menu/croissantes/cinnamonrol-hover.webp',
         tags: ['Non-GMO'],
-        description: 'Soaked in light rum syrup and filled with a thick layer of almond frangipane, then baked again for a nutty, caramelized crunch.',
-        ingredients: ['Classic Croissant', 'Almond Flour', 'Organic Eggs', 'Rum Syrup', 'Toasted Almond Slivers']
+        description: 'Bañado en un ligero almíbar de ron y relleno con una capa gruesa de frangipane de almendras, horneado dos veces para un crujido caramelizado.',
+        ingredients: ['Croissant Clásico', 'Harina de Almendras', 'Huevos Orgánicos', 'Almíbar de Ron', 'Laminas de Almendra Tostada']
       },
       { 
         id: 'c3', 
@@ -33,14 +33,19 @@ export const COLLECTIONS: Collection[] = [
         image: '/images/menu/croissantes/painauchocolat.webp',
         hoverImage: '/images/menu/croissantes/painauchocolat-hover.webp', 
         tags: ['Non-GMO'],
-        description: 'Tucked inside our buttery dough are three bars of 70% dark Valrhona chocolate, offering a perfect balance of bitter and sweet.',
-        ingredients: ['Organic Wheat Flour', 'Cultured Butter', 'Valrhona 70% Dark Chocolate', 'Sea Salt', 'Cane Sugar']
+        description: 'Dentro de nuestra masa mantecosa se esconden tres barras de chocolate negro Valrhona al 70%, ofreciendo un equilibrio perfecto entre amargo y dulce.',
+        ingredients: ['Harina de Trigo Orgánica', 'Mantequilla Cultivada', 'Chocolate Negro Valrhona 70%', 'Sal Marina', 'Azúcar de Caña']
       },
-      { id: 'c4', name: 'Pistachio Cream Escargot', price: 6.75, image: 'https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Spiraled pastry filled with rich pistachio pastry cream and roasted kernels.', ingredients: ['Pistachio Flour', 'Whole Milk', 'Vanilla Bean', 'Wheat Flour', 'Butter'] },
-      { id: 'c5', name: 'Ham & Gruyère Croissant', price: 8.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Savory morning favorite with house-cured ham and 12-month aged Swiss Gruyère.', ingredients: ['Cured Ham', 'Gruyère Cheese', 'Dijon Mustard', 'Buttery Pastry'] },
-      { id: 'c6', name: 'Ham & Gruyère Croissant', price: 8.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Savory morning favorite with house-cured ham and 12-month aged Swiss Gruyère.', ingredients: ['Cured Ham', 'Gruyère Cheese', 'Dijon Mustard', 'Buttery Pastry'] },
-      { id: 'c7', name: 'Ham & Gruyère Croissant', price: 8.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Savory morning favorite with house-cured ham and 12-month aged Swiss Gruyère.', ingredients: ['Cured Ham', 'Gruyère Cheese', 'Dijon Mustard', 'Buttery Pastry'] },
-      { id: 'c8', name: 'Ham & Gruyère Croissant', price: 8.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Savory morning favorite with house-cured ham and 12-month aged Swiss Gruyère.', ingredients: ['Cured Ham', 'Gruyère Cheese', 'Dijon Mustard', 'Buttery Pastry'] },
+      { 
+        id: 'c4', 
+        name: 'Caracola de Pistacho', 
+        price: 675, 
+        image: '/images/menu/croissantes/croissant1.webp',
+        hoverImage: '/images/menu/croissantes/croissant1-hover.webp',
+        tags: ['Non-GMO'],
+        description: 'Masa en espiral rellena con rica crema pastelera de pistacho y granos tostados.',
+        ingredients: ['Harina de Pistacho', 'Leche Entera', 'Vaina de Vainilla', 'Harina de Trigo', 'Mantequilla']
+      },
     ]
   },
   {
@@ -49,37 +54,37 @@ export const COLLECTIONS: Collection[] = [
     products: [
       { 
         id: 'k1', 
-        name: 'Lemon Poppyseed Loaf', 
+        name: 'Budín de Limón y Amapola', 
         price: 12.00, 
         image: '/images/menu/cakes/cake1.webp', 
         hoverImage: '/images/menu/cakes/cake1-hover.webp',
         tags: ['Non-GMO'],
-        description: 'A dense, moist loaf infused with Meyer lemon zest and a generous amount of blue poppyseeds for texture.',
-        ingredients: ['Organic Flour', 'Meyer Lemons', 'Blue Poppyseeds', 'Greek Yogurt', 'Extra Virgin Olive Oil']
+        description: 'Un budín denso y húmedo infusionado con ralladura de limón Meyer y una generosa cantidad de semillas de amapola azul para texturizar.',
+        ingredients: ['Harina Orgánica', 'Limones Meyer', 'Semillas de Amapola Azul', 'Yogur Griego', 'Aceite de Oliva Virgen Extra']
       },
       { 
         id: 'k2', 
-        name: 'Dark Chocolate Ganache', 
+        name: 'Ganache de Chocolate Negro', 
         price: 45.00, 
         image: '/images/menu/cakes/cake2.webp',
         hoverImage: '/images/menu/cakes/cake2-hover.webp',
-        tags: ['Non-GMO', 'Vegan'],
-        description: 'A rich, flourless-style cake made with cold-pressed cocoa and coconut milk, topped with a silk-smooth chocolate glaze.',
-        ingredients: ['70% Cocoa', 'Coconut Milk', 'Maple Syrup', 'Almond Flour', 'Sea Salt']
+        tags: ['Non-GMO', 'Vegano'],
+        description: 'Un rico pastel estilo sin harina hecho con cacao prensado en frío y leche de coco, cubierto con un glaseado de chocolate suave como la seda.',
+        ingredients: ['70% Cacao', 'Leche de Coco', 'Jarabe de Arce', 'Harina de Almendras', 'Sal Marina']
       },
       { 
         id: 'k3', 
-        name: 'Burnt Basque Cheesecake', 
+        name: 'Cheesecake Vasco', 
         price: 38.00, 
         image: '/images/menu/cakes/cake3.webp', 
         hoverImage: '/images/menu/cakes/cake3-hover.webp',
         tags: ['Non-GMO'], 
-        description: 'Baked at high heat to achieve a deeply caramelized top while maintaining a custardy center.', 
-        ingredients: ['Cream Cheese', 'Heavy Cream', 'Organic Eggs', 'Vanilla Paste'] 
+        description: 'Horneado a alta temperatura para lograr una superficie profundamente caramelizada manteniendo un centro cremoso.', 
+        ingredients: ['Queso Crema', 'Crema Espesa', 'Huevos Orgánicos', 'Pasta de Vainilla'] 
       },
       { 
         id: 'k4', 
-        name: 'Wild Berry Sponge', 
+        name: 'Bizcocho de Frutos Rojos', 
         price: 14.00, 
         image: '/images/menu/cakes/cake4.webp', 
         hoverImage: '/images/menu/cakes/cake4-hover.webp',
@@ -87,7 +92,7 @@ export const COLLECTIONS: Collection[] = [
       },
       { 
         id: 'k5', 
-        name: 'Spiced Carrot Cake', 
+        name: 'Pastel de Zanahoria', 
         price: 15.50, 
         image: '/images/menu/cakes/cake5.webp', 
         hoverImage: '/images/menu/cakes/cake5-hover.webp',
@@ -96,83 +101,133 @@ export const COLLECTIONS: Collection[] = [
     ]
   },
   {
-    id: 'sandwiches',
-    title: 'Sandwiches',
+    id: 'cookies',
+    title: 'Cookies',
     products: [
       { 
-        id: 's1', 
-        name: 'Prosciutto & Fig Baguette', 
-        price: 14.50, 
-        image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80', 
+        id: 'co1', 
+        name: 'Galleta con Trozos de Chocolate', 
+        price: 4.50, 
+        image: '/images/menu/cookies/cookie1.webp', 
+        hoverImage: '/images/menu/cookies/cookie1-hover.webp', 
         tags: ['Non-GMO'],
-        description: '18-month aged Prosciutto di Parma paired with mission fig jam and triple-cream brie on a sourdough baguette.',
-        ingredients: ['Sourdough Baguette', 'Prosciutto', 'Mission Figs', 'Brie Cheese', 'Wild Arugula']
+        description: 'Galleta clásica con trozos de chocolate semidulce.',
+        ingredients: ['Harina', 'Mantequilla', 'Chocolate', 'Azúcar', 'Huevos']
       },
-      { id: 's2', name: 'Heirloom Tomato Caprese', price: 12.00, image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO', 'Vegan'] },
-      { id: 's3', name: 'Avocado Sourdough Tartine', price: 13.50, image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO', 'Vegan'] },
-      { id: 's4', name: 'Smoked Salmon Rye', price: 16.00, image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'] },
-      { id: 's5', name: 'Roast Turkey & Brie', price: 15.00, image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'] },
-    ]
-  },
-  {
-    id: 'delicatteesen',
-    title: 'Delicatteesen',
-    products: [
-      { id: 'd1', name: 'House Cultured Butter', price: 8.00, image: '/images/menu/delicatteesen/donas.webp', hoverImage: '/images/menu/delicatteesen/donas-hover.webp', tags: ['Non-GMO'] },
-      { id: 'd2', name: 'Marinated Kalamata Olives', price: 9.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO', 'Vegan'] },
-      { id: 'd3', name: 'Marinated Kalamata Olives', price: 9.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO', 'Vegan'] },
-      { id: 'd4', name: 'Marinated Kalamata Olives', price: 9.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO', 'Vegan'] },
-    ]
-  },
-  {
-    id: 'eventos',
-    title: 'Eventos',
-    products: [
-      { id: 'e1', name: 'Breakfast Pastry Box', price: 45.00, image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'] },
-      { id: 'e2', name: 'Catering Sandwich Platter', price: 85.00, image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'] },
-      { id: 'e3', name: 'Miniature Cake Selection', price: 60.00, image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'] },
-      { id: 'e4', name: 'Wedding Tasting Pack', price: 25.00, image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'] },
-      { id: 'e5', name: 'Artisan Coffee Service', price: 35.00, image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO', 'Vegan'] },
-    ]
-  },
-  {
-  id: 'queso',
-    title: 'Rucula',
-    products: [
       { 
-        id: 'j1', 
-        name: 'Classic Butter Croissant', 
+        id: 'co2', 
+        name: 'Galleta de Avena y Pasas', 
+        price: 4.00, 
+        image: '/images/menu/cookies/cookie2.webp', 
+        hoverImage: '/images/menu/cookies/cookie2-hover.webp', 
+        tags: ['Non-GMO'], 
+        description: 'Galleta de avena con pasas, suave y masticable.',
+        ingredients: ['Avena', 'Pasas', 'Mantequilla', 'Harina', 'Canela'] 
+      },
+      { 
+        id: 'co3', 
+        name: 'Galleta de Doble Chocolate', 
         price: 4.75, 
-        image: 'https://pngimg.com/d/croissant_PNG46693.png', 
-        tags: ['Non-GMO'],
-        description: 'Our signature 27-layer croissant, made with Isigny Ste Mère butter for an incomparable honeycomb crumb and golden, flaky crust.',
-        ingredients: ['Organic Wheat Flour', 'Cultured Butter', 'Sea Salt', 'Organic Cane Sugar', 'Fresh Yeast']
+        image: '/images/menu/cookies/cookie3.webp', 
+        hoverImage: '/images/menu/cookies/cookie3-hover.webp', 
+        tags: ['Non-GMO'], 
+        description: 'Doble chocolate para los amantes del cacao.',
+        ingredients: ['Cacao', 'Chocolate', 'Mantequilla', 'Azúcar', 'Harina'] 
       },
       { 
-        id: 'j2', 
-        name: 'Almond Twice-Baked', 
-        price: 6.50, 
-        image: 'https://danielsdonuts.com.au/wp-content/uploads/2025/02/DD_PNG_HiSylvia-15.png', 
-        tags: ['Non-GMO'],
-        description: 'Soaked in light rum syrup and filled with a thick layer of almond frangipane, then baked again for a nutty, caramelized crunch.',
-        ingredients: ['Classic Croissant', 'California Almond Flour', 'Organic Eggs', 'Rum Syrup', 'Toasted Almond Slivers']
+        id: 'co4', 
+        name: 'Chocolate Blanco y Macadamia', 
+        price: 5.00, 
+        image: '/images/menu/cookies/cookie4.webp', 
+        hoverImage: '/images/menu/cookies/cookie4-hover.webp', 
+        tags: ['Non-GMO'], 
+        description: 'Chocolate blanco cremoso con nueces de macadamia crujientes.',
+        ingredients: ['Chocolate Blanco', 'Nueces de Macadamia', 'Mantequilla', 'Azúcar', 'Harina'] 
       },
       { 
-        id: 'j3', 
-        name: 'Valrhona Pain au Chocolat', 
-        price: 5.75, 
-        image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', 
-        tags: ['Non-GMO'],
-        description: 'Tucked inside our buttery dough are three bars of 70% dark Valrhona chocolate, offering a perfect balance of bitter and sweet.',
-        ingredients: ['Organic Wheat Flour', 'Cultured Butter', 'Valrhona 70% Dark Chocolate', 'Sea Salt', 'Cane Sugar']
+        id: 'co5', 
+        name: 'Galleta de Mantequilla de Maní', 
+        price: 4.25, 
+        image: '/images/menu/cookies/cookie5.webp', 
+        hoverImage: '/images/menu/cookies/cookie5-hover.webp', 
+        tags: ['Non-GMO'], 
+        description: 'Rica y mantecosa galleta de mantequilla de maní.',
+        ingredients: ['Mantequilla de Maní', 'Mantequilla', 'Azúcar Morena', 'Harina', 'Huevos'] 
       },
-      { id: 'j4', name: 'Pistachio Cream Escargot', price: 6.75, image: 'https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Spiraled pastry filled with rich pistachio pastry cream and roasted kernels.', ingredients: ['Pistachio Flour', 'Whole Milk', 'Vanilla Bean', 'Wheat Flour', 'Butter'] },
-      { id: 'j5', name: 'Ham & Gruyère Croissant', price: 8.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Savory morning favorite with house-cured ham and 12-month aged Swiss Gruyère.', ingredients: ['Cured Ham', 'Gruyère Cheese', 'Dijon Mustard', 'Buttery Pastry'] },
-      { id: 'j6', name: 'Ham & Gruyère Croissant', price: 8.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Savory morning favorite with house-cured ham and 12-month aged Swiss Gruyère.', ingredients: ['Cured Ham', 'Gruyère Cheese', 'Dijon Mustard', 'Buttery Pastry'] },
-      { id: 'j7', name: 'Ham & Gruyère Croissant', price: 8.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Savory morning favorite with house-cured ham and 12-month aged Swiss Gruyère.', ingredients: ['Cured Ham', 'Gruyère Cheese', 'Dijon Mustard', 'Buttery Pastry'] },
-      { id: 'j8', name: 'Ham & Gruyère Croissant', price: 8.50, image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?auto=format&fit=crop&w=500&q=80', tags: ['Non-GMO'], description: 'Savory morning favorite with house-cured ham and 12-month aged Swiss Gruyère.', ingredients: ['Cured Ham', 'Gruyère Cheese', 'Dijon Mustard', 'Buttery Pastry'] },
     ]
-  }
+  },
+  {
+    id: 'macarons',
+    title: 'Macarons',
+    products: [
+      {
+        id: 'macaron-1',
+        name: 'Frambuesa Clásica',
+        price: 3.50,
+        image: '/images/menu/macaron/macaron1.webp',
+        hoverImage: '/images/menu/macaron/macaron1-hover.webp',
+        description: 'Delicadas conchas de almendra rellenas con ganache de frambuesa fresca.',
+        ingredients: ['Harina de Almendras', 'Azúcar', 'Claras de Huevo', 'Frambuesas', 'Chocolate Blanco'],
+        tags: ['SIN GLUTEN', 'FRUTAL'],
+        hidden: false
+      },
+      {
+        id: 'macaron-2',
+        name: 'Sueño de Pistacho',
+        price: 3.50,
+        image: '/images/menu/macaron/macaron2.webp',
+        hoverImage: '/images/menu/macaron/macaron2-hover.webp',
+        description: 'Rica crema de mantequilla de pistacho entre ligeras conchas verdes.',
+        ingredients: ['Harina de Almendras', 'Azúcar', 'Claras de Huevo', 'Pistachos', 'Mantequilla'],
+        tags: ['SIN GLUTEN', 'NUECES'],
+        hidden: false
+      },
+      {
+        id: 'macaron-3',
+        name: 'Caramelo Salado',
+        price: 3.50,
+        image: '/images/menu/macaron/macaron3.webp',
+        hoverImage: '/images/menu/macaron/macaron3-hover.webp',
+        description: 'Relleno de caramelo dulce y salado en una concha dorada.',
+        ingredients: ['Harina de Almendras', 'Azúcar', 'Claras de Huevo', 'Crema', 'Sal Marina'],
+        tags: ['SIN GLUTEN', 'DULCE'],
+        hidden: false
+      },
+      {
+        id: 'macaron-4',
+        name: 'Chocolate Negro',
+        price: 3.50,
+        image: '/images/menu/macaron/macaron4.webp',
+        hoverImage: '/images/menu/macaron/macaron4-hover.webp',
+        description: 'Intenso ganache de chocolate negro 70% para los verdaderos amantes del chocolate.',
+        ingredients: ['Harina de Almendras', 'Azúcar', 'Claras de Huevo', 'Chocolate Negro', 'Cacao en Polvo'],
+        tags: ['SIN GLUTEN', 'CHOCOLATE'],
+        hidden: false
+      },
+      {
+        id: 'macaron-5',
+        name: 'Ralladura de Limón',
+        price: 3.50,
+        image: '/images/menu/macaron/macaron5.webp',
+        hoverImage: '/images/menu/macaron/macaron5-hover.webp',
+        description: 'Relleno de crema de limón brillante y ácida.',
+        ingredients: ['Harina de Almendras', 'Azúcar', 'Claras de Huevo', 'Jugo de Limón', 'Mantequilla'],
+        tags: ['SIN GLUTEN', 'CÍTRICO'],
+        hidden: false
+      },
+      {
+        id: 'macaron-6',
+        name: 'Vaina de Vainilla',
+        price: 3.50,
+        image: '/images/menu/macaron/macaron6.webp',
+        hoverImage: '/images/menu/macaron/macaron6-hover.webp',
+        description: 'Clásica crema de mantequilla de vainilla hecha con vainilla de Madagascar.',
+        ingredients: ['Harina de Almendras', 'Azúcar', 'Claras de Huevo', 'Vaina de Vainilla', 'Mantequilla'],
+        tags: ['SIN GLUTEN', 'CLÁSICO'],
+        hidden: false
+      }
+    ]
+  },
 ];
 
 export const NEWS_ITEMS: NewsItem[] = [
@@ -259,8 +314,8 @@ export const INSTAGRAM_POSTS = [
 ];
 
 export const LOCATIONS = [
-  { name: 'Villa Luro', address: 'Manzoni 30', phone: '(310) 439-2894' },
-  { name: 'Plaza Irlanda', address: 'Av. Donato Alvarez 900', phone: '(747) 205-2279' },
+  { name: 'Villa Luro', address: 'Manzoni 30', phone: '(310) 439-2894', mapUrl: 'https://maps.app.goo.gl/rkqGnUa7outH3wkr9' },
+  { name: 'Plaza Irlanda', address: 'Av. Donato Alvarez 900', phone: '(747) 205-2279', mapUrl: 'https://maps.app.goo.gl/3Jy8CANzUQbQn9CR7' },
 ];
 
 export const ABOUT_CONTENT: AboutContent = {

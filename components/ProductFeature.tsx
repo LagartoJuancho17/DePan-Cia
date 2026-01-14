@@ -74,7 +74,7 @@ const ProductFeature: React.FC<Props> = ({ collections, activeId, onSelect, onAd
 
         <div className="relative group">
           <div ref={scrollRef} onScroll={handleScroll} className="flex gap-[2px] overflow-x-auto px-[1px] hide-scrollbar snap-x">
-            {activeCollection.products.map((product, idx) => (
+            {activeCollection.products.filter(p => !p.hidden).map((product, idx) => (
               <div 
                 key={`${activeId}-${product.id}`} 
                 onClick={() => onViewDetails(product)}

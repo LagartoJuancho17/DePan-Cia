@@ -45,7 +45,7 @@ const ProductModal: React.FC<Props> = ({ product, onClose, onAddToCart }) => {
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-[10px] font-black uppercase tracking-[0.2em] opacity-40 mb-3">Our Story</h3>
+                <h3 className="text-[10px] font-black uppercase tracking-[0.2em] opacity-40 mb-3">Qué es?</h3>
                 <p className="text-lg leading-relaxed font-medium opacity-70 italic">
                   {product.description || "Every ingredient is chosen with purpose, sourced from local farmers who share our passion for high-quality, sustainable food."}
                 </p>
@@ -53,7 +53,7 @@ const ProductModal: React.FC<Props> = ({ product, onClose, onAddToCart }) => {
 
               {product.ingredients && (
                 <div>
-                  <h3 className="text-[10px] font-black uppercase tracking-[0.2em] opacity-40 mb-3">Ingredients</h3>
+                  <h3 className="text-[10px] font-black uppercase tracking-[0.2em] opacity-40 mb-3">Ingredientes</h3>
                   <div className="flex flex-wrap gap-x-6 gap-y-2">
                     {product.ingredients.map((ing, i) => (
                       <span key={i} className="text-sm font-bold opacity-80 flex items-center gap-2">

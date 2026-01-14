@@ -10,7 +10,15 @@ interface ContentContextType {
   news: NewsItem[];
   aboutContent: AboutContent;
   updateCollection: (updatedCollection: Collection) => void;
+  // Collection CRUD
+  addCollection: (title: string, id: string) => void;
+  deleteCollection: (id: string) => void;
+  
+  // Product CRUD
+  addProduct: (collectionId: string, product: Product) => void;
   updateProduct: (collectionId: string, updatedProduct: Product) => void;
+  deleteProduct: (collectionId: string, productId: string) => void;
+  
   updateSection: (index: number, updatedSection: SectionContent) => void;
   updateNewsItem: (updatedNews: NewsItem) => void;
   updateAboutContent: (updatedAbout: AboutContent) => void;
@@ -50,23 +58,57 @@ export const ContentProvider: React.FC<{ children: React.ReactNode }> = ({ child
   const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem('pan-cia-collections', JSON.stringify(collections));
+    try {
+      localStorage.setItem('pan-cia-collections', JSON.stringify(collections));
+    } catch (e) {
+      console.error('Failed to save collections:', e);
+      alert('Storage limit exceeded. Some changes might not be saved. Try simpler images.');
+    }
   }, [collections]);
 
   useEffect(() => {
-    localStorage.setItem('pan-cia-sections', JSON.stringify(sections));
+    try {
+      localStorage.setItem('pan-cia-sections', JSON.stringify(sections));
+    } catch (e) {
+      console.error('Failed to save sections:', e);
+    }
   }, [sections]);
 
   useEffect(() => {
-    localStorage.setItem('pan-cia-news', JSON.stringify(news));
+    try {
+      localStorage.setItem('pan-cia-news', JSON.stringify(news));
+    } catch (e) {
+      console.error('Failed to save news:', e);
+    }
   }, [news]);
 
   useEffect(() => {
-    localStorage.setItem('pan-cia-about', JSON.stringify(aboutContent));
+    try {
+      localStorage.setItem('pan-cia-about', JSON.stringify(aboutContent));
+    } catch (e) {
+      console.error('Failed to save about content:', e);
+    }
   }, [aboutContent]);
 
   const updateCollection = (updatedCollection: Collection) => {
     setCollections(prev => prev.map(c => c.id === updatedCollection.id ? updatedCollection : c));
+  };
+
+  const addCollection = (title: string, id: string) => {
+    setCollections(prev => [...prev, { id, title, products: [] }]);
+  };
+
+  const deleteCollection = (id: string) => {
+    setCollections(prev => prev.filter(c => c.id !== id));
+  };
+
+  const addProduct = (collectionId: string, product: Product) => {
+    setCollections(prev => prev.map(c => {
+      if (c.id === collectionId) {
+        return { ...c, products: [...c.products, product] };
+      }
+      return c;
+    }));
   };
 
   const updateProduct = (collectionId: string, updatedProduct: Product) => {
@@ -75,6 +117,18 @@ export const ContentProvider: React.FC<{ children: React.ReactNode }> = ({ child
         return {
           ...c,
           products: c.products.map(p => p.id === updatedProduct.id ? updatedProduct : p)
+        };
+      }
+      return c;
+    }));
+  };
+
+  const deleteProduct = (collectionId: string, productId: string) => {
+    setCollections(prev => prev.map(c => {
+      if (c.id === collectionId) {
+        return {
+          ...c,
+          products: c.products.filter(p => p.id !== productId)
         };
       }
       return c;
@@ -111,7 +165,11 @@ export const ContentProvider: React.FC<{ children: React.ReactNode }> = ({ child
       news,
       aboutContent,
       updateCollection, 
+      addCollection,
+      deleteCollection,
+      addProduct,
       updateProduct,
+      deleteProduct,
       updateSection,
       updateNewsItem,
       updateAboutContent,

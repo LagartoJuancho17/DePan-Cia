@@ -8,6 +8,7 @@ export interface Product {
   tags: string[];
   description?: string;
   ingredients?: string[];
+  hidden?: boolean;
 }
 
 export interface CartItem {
@@ -19,6 +20,7 @@ export interface Collection {
   id: string;
   title: string;
   products: Product[];
+  hidden?: boolean;
 }
 
 export interface SectionContent {

@@ -1,6 +1,7 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { CartItem } from '../types';
+import CheckoutModal from './CheckoutModal';
 
 interface Props {
   isOpen: boolean;
@@ -11,6 +12,7 @@ interface Props {
 }
 
 const Cart: React.FC<Props> = ({ isOpen, onClose, items, onUpdateQuantity, onRemove }) => {
+  const [showCheckout, setShowCheckout] = useState(false);
   const subtotal = items.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
 
   return (
@@ -112,14 +114,24 @@ const Cart: React.FC<Props> = ({ isOpen, onClose, items, onUpdateQuantity, onRem
                   <span className="text-[#D12626]">${subtotal.toFixed(2)}</span>
                 </div>
               </div>
-              <button className="w-full bg-[#D12626] text-white py-6 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] shadow-xl shadow-[#D12626]/20 hover:shadow-[#D12626]/40 hover:translate-y-[-2px] active:translate-y-[0px] transition-all duration-300">
+              <button 
+                onClick={() => setShowCheckout(true)}
+                className="w-full bg-[#D12626] text-white py-6 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] shadow-xl shadow-[#D12626]/20 hover:shadow-[#D12626]/40 hover:translate-y-[-2px] active:translate-y-[0px] transition-all duration-300"
+              >
                 Finalizar Compra
               </button>
-              <p className="text-[9px] text-center opacity-30 font-bold uppercase tracking-widest">Procesado con seguridad SSL</p>
+              <p className="text-[9px] text-center opacity-30 font-bold uppercase tracking-widest">Pedido por WhatsApp</p>
             </div>
           )}
         </div>
       </div>
+
+      <CheckoutModal 
+        isOpen={showCheckout} 
+        onClose={() => setShowCheckout(false)} 
+        items={items} 
+        subtotal={subtotal} 
+      />
     </>
   );
 };

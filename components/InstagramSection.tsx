@@ -8,7 +8,7 @@ const InstagramSection: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
         <div className="space-y-2">
           <p className="text-sm font-bold uppercase tracking-widest opacity-40">Social</p>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">Follow us on Instagram</h2>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter uppercase">Seguinos en Instagram</h2>
         </div>
         <a 
           href="https://www.instagram.com/depan_cia/" 

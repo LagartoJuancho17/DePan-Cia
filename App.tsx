@@ -6,7 +6,6 @@ import ProductFeature from './components/ProductFeature';
 import BakeryMenu from './components/BakeryMenu';
 import Marquee from './components/Marquee';
 import TwoUpSection from './components/TwoUpSection';
-import CollectionCutouts from './components/CollectionCutouts';
 import InstagramSection from './components/InstagramSection';
 import AIService from './components/AIService';
 import ShopAll from './components/ShopAll';
@@ -128,10 +127,6 @@ const App: React.FC = () => {
             </div>
 
             <div className="reveal">
-              <CollectionCutouts />
-            </div>
-
-            <div className="reveal">
               <InstagramSection />
             </div>
           </>
@@ -169,9 +164,14 @@ const App: React.FC = () => {
                 <h3 className="text-xs font-black uppercase tracking-[0.3em] text-[#D12626]">{loc.name}</h3>
                 <p className="text-2xl font-bold tracking-tight leading-tight">{loc.address}</p>
                 <p className="opacity-40 text-sm font-bold">{loc.phone}</p>
-                <button className="text-[10px] font-black uppercase tracking-widest border-b-2 border-black pb-1 hover:text-[#D12626] hover:border-[#D12626] transition-all">
-                  Get Directions
-                </button>
+                <a 
+                  href={loc.mapUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block text-[10px] font-black uppercase tracking-widest border-b-2 border-black pb-1 hover:text-[#D12626] hover:border-[#D12626] transition-all cursor-pointer"
+                >
+                  Obtener Dirección
+                </a>
               </div>
             ))}
           </div>

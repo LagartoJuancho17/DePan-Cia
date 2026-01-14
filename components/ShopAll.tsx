@@ -19,7 +19,7 @@ const ShopAll: React.FC<Props> = ({ collections, onBack, onAddToCart, onViewDeta
     const seenIds = new Set();
     collections.forEach(c => {
       c.products.forEach(p => {
-        if (!seenIds.has(p.id)) {
+        if (!seenIds.has(p.id) && !p.hidden) {
           products.push(p);
           seenIds.add(p.id);
         }

@@ -57,7 +57,7 @@ const MenuView: React.FC<Props> = ({ onBack, onAddToCart, onViewDetails }) => {
               </div>
 
               <div className="space-y-10">
-                {collection.products.map((product, pIdx) => (
+                {collection.products.filter(p => !p.hidden).map((product, pIdx) => (
                   <div 
                     key={product.id} 
                     onClick={() => onViewDetails(product)}
