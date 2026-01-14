@@ -7,7 +7,6 @@ import BakeryMenu from './components/BakeryMenu';
 import Marquee from './components/Marquee';
 import TwoUpSection from './components/TwoUpSection';
 import InstagramSection from './components/InstagramSection';
-import AIService from './components/AIService';
 import ShopAll from './components/ShopAll';
 import About from './components/About';
 import News from './components/News';
@@ -235,8 +234,6 @@ const App: React.FC = () => {
         onClose={() => setSelectedProduct(null)}
         onAddToCart={addToCart}
       />
-
-      <AIService />
       <AdminPanel />
     </div>
   );

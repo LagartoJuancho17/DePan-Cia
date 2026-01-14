@@ -314,8 +314,8 @@ export const INSTAGRAM_POSTS = [
 ];
 
 export const LOCATIONS = [
-  { name: 'Villa Luro', address: 'Manzoni 30', phone: '(310) 439-2894', mapUrl: 'https://maps.app.goo.gl/rkqGnUa7outH3wkr9' },
-  { name: 'Plaza Irlanda', address: 'Av. Donato Alvarez 900', phone: '(747) 205-2279', mapUrl: 'https://maps.app.goo.gl/3Jy8CANzUQbQn9CR7' },
+  { name: 'Villa Luro', address: 'Manzoni 30', phone: '+54 9 11 3503-4928', mapUrl: 'https://maps.app.goo.gl/rkqGnUa7outH3wkr9' },
+  { name: 'Plaza Irlanda', address: 'Av. Donato Alvarez 900', phone: '+54 9 11 2551-2586', mapUrl: 'https://maps.app.goo.gl/3Jy8CANzUQbQn9CR7' },
 ];
 
 export const ABOUT_CONTENT: AboutContent = {

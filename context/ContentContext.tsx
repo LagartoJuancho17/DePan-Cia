@@ -78,10 +78,7 @@ export const ContentProvider: React.FC<{ children: React.ReactNode }> = ({ child
     return saved ? JSON.parse(saved) : INITIAL_SECTIONS;
   });
 
-  const [locations, setLocations] = useState(() => {
-    const saved = localStorage.getItem('pan-cia-locations-v2');
-    return saved ? JSON.parse(saved) : INITIAL_LOCATIONS;
-  });
+  const [locations, setLocations] = useState(INITIAL_LOCATIONS);
 
   const [news, setNews] = useState<NewsItem[]>(() => {
     const saved = localStorage.getItem('pan-cia-news-v2');

@@ -8,26 +8,41 @@ interface Props {
   subtotal: number;
 }
 
+import { useContent } from '../context/ContentContext';
+
+interface Props {
+  isOpen: boolean;
+  onClose: () => void;
+  items: CartItem[];
+  subtotal: number;
+}
+
 const CheckoutModal: React.FC<Props> = ({ isOpen, onClose, items, subtotal }) => {
   const [name, setName] = useState('');
+  const { locations } = useContent();
 
   if (!isOpen) return null;
 
-  const handleCheckout = (location: 'Villa Luro' | 'Plaza Irlanda') => {
-    // 1. Generate unique order code (e.g., #A1B2)
+  const handleCheckout = (locationName: string) => {
+    // 1. Find correct phone number
+    const locationData = locations.find(l => l.name === locationName);
+    const rawPhone = locationData?.phone || '541138032652'; // Fallback
+    // Remove symbols for URL
+    const cleanPhone = rawPhone.replace(/\D/g, '');
+
+    // 2. Generate unique order code (e.g., #A1B2)
     const code = Math.random().toString(36).substring(2, 6).toUpperCase();
     
-    // 2. Format items list
+    // 3. Format items list
     const itemsList = items.map(item => 
       `• ${item.quantity}x ${item.product.name} ($${(item.product.price * item.quantity).toFixed(2)})`
     ).join('\n');
 
-    // 3. Construct message
-    const message = `Hola, soy ${name}. Quería hacer el siguiente pedido:\n\n${itemsList}\n\nTotal: $${subtotal.toFixed(2)}\nCódigo de Pedido: #${code}\n\nSucursal: ${location}`;
+    // 4. Construct message
+    const message = `Hola, soy ${name}. Quería hacer el siguiente pedido:\n\n${itemsList}\n\nTotal: $${subtotal.toFixed(2)}\nCódigo de Pedido: #${code}\n\nSucursal: ${locationName}`;
 
-    // 4. Redirect to WhatsApp with proper encoding
-    const phone = '541138032652';
-    const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    // 5. Redirect to WhatsApp
+    const whatsappUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
     onClose();
   };
