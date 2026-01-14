@@ -20,6 +20,7 @@ const AdminPanel: React.FC = () => {
     updateSection, 
     updateNewsItem, 
     updateAboutContent,
+    syncDataToCloud,
     logout 
   } = useContent();
   
@@ -135,6 +136,12 @@ const AdminPanel: React.FC = () => {
           <div className="flex justify-between items-center mb-8 border-b border-black/10 pb-6">
             <div className="flex items-center gap-4">
               <h2 className="text-2xl font-black uppercase tracking-tighter">Site Editor</h2>
+              <button 
+                onClick={syncDataToCloud}
+                className="bg-red-600 text-white px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest hover:bg-red-700 transition-colors"
+              >
+                Sync Data
+              </button>
               <button 
                 onClick={() => setIsExportOpen(true)}
                 className="bg-black text-white px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest hover:bg-[#D12626] transition-colors"
