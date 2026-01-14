@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useContent } from '../context/ContentContext';
 import { Product, NewsItem } from '../types';
 import ImageUploader from './ImageUploader';
+import AdminExportModal from './AdminExportModal';
 
 const AdminPanel: React.FC = () => {
   const { 
@@ -23,6 +24,7 @@ const AdminPanel: React.FC = () => {
   } = useContent();
   
   const [isOpen, setIsOpen] = useState(false);
+  const [isExportOpen, setIsExportOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<'menu' | 'sections' | 'about' | 'news'>('menu');
   const [selectedCollectionId, setSelectedCollectionId] = useState(collections[0].id);
   const [editingProduct, setEditingProduct] = useState<Product | null>(null);
@@ -131,7 +133,15 @@ const AdminPanel: React.FC = () => {
       <div className={`fixed inset-y-0 right-0 w-full md:w-[600px] bg-white shadow-2xl z-[100] transform transition-transform duration-500 overflow-y-auto ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="p-8">
           <div className="flex justify-between items-center mb-8 border-b border-black/10 pb-6">
-            <h2 className="text-2xl font-black uppercase tracking-tighter">Site Editor</h2>
+            <div className="flex items-center gap-4">
+              <h2 className="text-2xl font-black uppercase tracking-tighter">Site Editor</h2>
+              <button 
+                onClick={() => setIsExportOpen(true)}
+                className="bg-black text-white px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest hover:bg-[#D12626] transition-colors"
+              >
+                Export Code
+              </button>
+            </div>
             <div className="flex gap-4">
               <button onClick={logout} className="text-[10px] font-bold uppercase text-[#D12626] hover:underline">Logout</button>
               <button onClick={() => setIsOpen(false)} className="text-2xl font-bold hover:text-[#D12626]">&times;</button>
@@ -449,6 +459,14 @@ const AdminPanel: React.FC = () => {
           )}
         </div>
       </div>
+      <AdminExportModal 
+        isOpen={isExportOpen} 
+        onClose={() => setIsExportOpen(false)} 
+        collections={collections}
+        sections={sections}
+        news={news}
+        aboutContent={aboutContent}
+      />
     </>
   );
 };
