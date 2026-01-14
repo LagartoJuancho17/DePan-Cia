@@ -31,27 +31,65 @@ const ContentContext = createContext<ContentContextType | undefined>(undefined);
 
 export const ContentProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [collections, setCollections] = useState<Collection[]>(() => {
-    const saved = localStorage.getItem('pan-cia-collections');
-    return saved ? JSON.parse(saved) : INITIAL_COLLECTIONS;
+    const saved = localStorage.getItem('pan-cia-collections-v2');
+    if (saved) {
+      try {
+        const parsedSaved: Collection[] = JSON.parse(saved);
+        // Merge strategy:
+        // 1. Start with saved data to keep user edits/order.
+        // 2. Add any collections from INITIAL that aren't in saved (by ID).
+        // 3. For existing collections, add any products from INITIAL that aren't in saved (by ID).
+        
+        const merged = [...parsedSaved];
+        
+        INITIAL_COLLECTIONS.forEach(initCol => {
+          const existingColIndex = merged.findIndex(c => c.id === initCol.id);
+          
+          if (existingColIndex === -1) {
+            // New collection found in code, add it
+            merged.push(initCol);
+          } else {
+            // Collection exists, check for new products
+            const existingCol = merged[existingColIndex];
+            const newProducts = initCol.products.filter(
+              initProd => !existingCol.products.some(p => p.id === initProd.id)
+            );
+            
+            if (newProducts.length > 0) {
+              merged[existingColIndex] = {
+                ...existingCol,
+                products: [...existingCol.products, ...newProducts]
+              };
+            }
+          }
+        });
+        
+        return merged;
+      } catch (e) {
+        console.error('Error parsing saved collections:', e);
+        return INITIAL_COLLECTIONS;
+      }
+    }
+    return INITIAL_COLLECTIONS;
   });
 
   const [sections, setSections] = useState<SectionContent[]>(() => {
-    const saved = localStorage.getItem('pan-cia-sections');
+    const saved = localStorage.getItem('pan-cia-sections-v2');
     return saved ? JSON.parse(saved) : INITIAL_SECTIONS;
   });
 
   const [locations, setLocations] = useState(() => {
-    const saved = localStorage.getItem('pan-cia-locations');
+    const saved = localStorage.getItem('pan-cia-locations-v2');
     return saved ? JSON.parse(saved) : INITIAL_LOCATIONS;
   });
 
   const [news, setNews] = useState<NewsItem[]>(() => {
-    const saved = localStorage.getItem('pan-cia-news');
+    const saved = localStorage.getItem('pan-cia-news-v2');
     return saved ? JSON.parse(saved) : INITIAL_NEWS;
   });
 
   const [aboutContent, setAboutContent] = useState<AboutContent>(() => {
-    const saved = localStorage.getItem('pan-cia-about');
+    const saved = localStorage.getItem('pan-cia-about-v2');
     return saved ? JSON.parse(saved) : INITIAL_ABOUT;
   });
 
@@ -59,7 +97,7 @@ export const ContentProvider: React.FC<{ children: React.ReactNode }> = ({ child
 
   useEffect(() => {
     try {
-      localStorage.setItem('pan-cia-collections', JSON.stringify(collections));
+      localStorage.setItem('pan-cia-collections-v2', JSON.stringify(collections));
     } catch (e) {
       console.error('Failed to save collections:', e);
       alert('Storage limit exceeded. Some changes might not be saved. Try simpler images.');
@@ -68,7 +106,7 @@ export const ContentProvider: React.FC<{ children: React.ReactNode }> = ({ child
 
   useEffect(() => {
     try {
-      localStorage.setItem('pan-cia-sections', JSON.stringify(sections));
+      localStorage.setItem('pan-cia-sections-v2', JSON.stringify(sections));
     } catch (e) {
       console.error('Failed to save sections:', e);
     }
@@ -76,7 +114,7 @@ export const ContentProvider: React.FC<{ children: React.ReactNode }> = ({ child
 
   useEffect(() => {
     try {
-      localStorage.setItem('pan-cia-news', JSON.stringify(news));
+      localStorage.setItem('pan-cia-news-v2', JSON.stringify(news));
     } catch (e) {
       console.error('Failed to save news:', e);
     }
@@ -84,7 +122,7 @@ export const ContentProvider: React.FC<{ children: React.ReactNode }> = ({ child
 
   useEffect(() => {
     try {
-      localStorage.setItem('pan-cia-about', JSON.stringify(aboutContent));
+      localStorage.setItem('pan-cia-about-v2', JSON.stringify(aboutContent));
     } catch (e) {
       console.error('Failed to save about content:', e);
     }
